@@ -22,3 +22,6 @@ cd mmclassification
 #提交代码
 git remote add .
 git remote add origin git@github.com:hepingpeace/OpenMMLabCamp.git
+
+#验证安装
+mim download mmcls --config mobilenet-v2_8xb32_in1k--dest .
