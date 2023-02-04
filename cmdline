@@ -1,0 +1,24 @@
+# 创建环境
+conda activate openmmlab
+
+#进入环境
+conda activate openmmlab
+
+#下载 pytorch cu+116
+pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116
+
+#NVIDIA-SMI not find
+apt --installed list | grep nvidia-driver #看那里之前安装出现什么问题
+sudo apt-get install nvidia-driver-510 #重现安装
+问题解决
+
+#Install MMCV using MIM.
+pip install -U openmim
+
+#Install from source (Recommended):
+git clone https://github.com/open-mmlab/mmclassification.git
+cd mmclassification
+
+#提交代码
+git remote add .
+git remote add origin git@github.com:hepingpeace/OpenMMLabCamp.git
